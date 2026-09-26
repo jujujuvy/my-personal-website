@@ -1,0 +1,420 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: #8e5aa8;
+    color: white;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd6f6;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(142, 90, 168, 0.75),
+        rgba(213, 139, 190, 0.75)
+    );
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #ffe1f7;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #8e5aa8;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #ffd6f6;
+}
+
+
+/* Sections */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    color: #8e5aa8;
+    margin-bottom: 40px;
+}
+
+
+/* About Section */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.profile-picture img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #d58bbe;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: #8e5aa8;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #8e5aa8;
+    margin-bottom: 15px;
+}
+
+
+/* Movie Section */
+.movie-section {
+    background-color: #f5eafa;
+}
+
+
+/* Food */
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.food-card {
+    background-color: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+}
+
+.food-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.food-card h3 {
+    color: #8e5aa8;
+    margin-bottom: 10px;
+}
+
+
+/* Favorite Songs */
+.audio-section {
+    background-color: #fff7fb;
+}
+
+.songs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.song-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.song-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.song-card iframe {
+    width: 100%;
+    height: 352px;
+    border: none;
+    border-radius: 12px;
+}
+
+.song-info {
+    padding: 10px 8px 5px;
+}
+
+.song-info h3 {
+    color: #8e5aa8;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.song-info p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Love Languages */
+.love-language-section {
+    background-color: #f5eafa;
+}
+
+.love-language-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.love-language-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.love-language-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.love-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.love-language-card h3 {
+    color: #8e5aa8;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.love-language-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Love Language - Tablet */
+@media (max-width: 900px) {
+    .love-language-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Love Language - Phone */
+@media (max-width: 600px) {
+    .love-language-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Favorite Photos */
+.photo-section {
+    background-color: #f5eafa;
+}
+
+.photos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.photo-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.photo-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 5px 5px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .photos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .photos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #8e5aa8;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+    .songs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Mobile Design */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+}
+
+
+/* Small Phone */
+@media (max-width: 600px) {
+    .songs-container {
+        grid-template-columns: 1fr;
+    }
+}
