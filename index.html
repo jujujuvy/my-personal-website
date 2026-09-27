@@ -1,94 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Personal Website</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <h2>My Website</h2>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="books.html">Books</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="foods.html">Foods</a></li>
-            <li><a href="songs.html">Songs</a></li>
-            <li><a href="love-languages.html">Love-Languages</a></li>
-            <li><a href="photos.html">Photos</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="books.html">Books</a>
+            <a href="movies.html">Movies</a>
+            <a href="foods.html">Foods</a>
+            <a href="songs.html">Songs</a>
+            <a href="love-languages.html">Love-Languages</a>
+            <a href="photos.html">Photos</a>
+        </div>
     </nav>
 
-    <!-- Home -->
-    <section id="home" class="hero">
-        <div>
-            <h1>Hello, I'm <span>Juvyrose!</span></h1>
-            <p>Welcome to my personal website!</p>
 
-            <a href="about.html" class="button">
+    <!-- HOME -->
+
+    <section id="home" class="home">
+
+        <div class="welcome">
+
+            <h1>
+                Welcome to<br>
+                My Personal Website!
+            </h1>
+
+            <p>
+                A little collection of things I love and cherish.
+            </p>
+
+            <a href="about.html" class="learn-btn">
                 Learn More About Me
             </a>
+
         </div>
-    </section>
 
-    <!-- My Favorites -->
-    <section class="section">
-        <h2>💜 My Favorite Things</h2>
 
-        <div class="cards">
+        <div class="favorites">
 
-            <div class="card">
-                <h3>📚 Favorite Books</h3>
-                <p>Discover some of my favorite books and why I like them.</p>
-                <a href="books.html" class="button">View Books</a>
-            </div>
+            <h2>My Favorite Things</h2>
 
-            <div class="card">
-                <h3>🎬 Favorite Movies</h3>
-                <p>See the movies that I enjoy watching.</p>
-                <a href="movies.html" class="button">View Movies</a>
-            </div>
+            <div class="favorite-container">
 
-            <div class="card">
-                <h3>🍴 Favorite Foods</h3>
-                <p>Here are some of my favorite foods.</p>
-                <a href="foods.html" class="button">View Foods</a>
-            </div>
-
-            <div class="card">
-                <h3>🎵 Favorite Songs</h3>
-                <p>Listen to some of my favorite songs.</p>
-                <a href="songs.html" class="button">View Songs</a>
-            </div>
-
-            <div class="card">
-                <h3>💜 Love Languages</h3>
-                <p>Learn about my love languages.</p>
-                <a href="love-languages.html" class="button">
-                    View Love Languages
+                <a href="books.html" class="favorite-card">
+                    <div class="icon">📚</div>
+                    <span>Books</span>
                 </a>
-            </div>
 
-            <div class="card">
-                <h3>📸 Favorite Photos</h3>
-                <p>Take a look at some photos that are special to me.</p>
-                <a href="photos.html" class="button">View Photos</a>
+                <a href="movies.html" class="favorite-card">
+                    <div class="icon">🎬</div>
+                    <span>Movies</span>
+                </a>
+
+                <a href="foods.html" class="favorite-card">
+                    <div class="icon">🍴</div>
+                    <span>Foods</span>
+                </a>
+
+                <a href="songs.html" class="favorite-card">
+                    <div class="icon">🎵</div>
+                    <span>Songs</span>
+                </a>
+
+                <a href="love-languages.html" class="favorite-card">
+                    <div class="icon">💕</div>
+                    <span>Love Languages</span>
+                </a>
+
+                <a href="photos.html" class="favorite-card">
+                    <div class="icon">📸</div>
+                    <span>Photos</span>
+                </a>
+
             </div>
 
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <h3>Thank You for Visiting!</h3>
-        <p>© 2026 Juvyrose | My Personal Website</p>
-    </footer>
+    </section>
 
 </body>
 </html>
