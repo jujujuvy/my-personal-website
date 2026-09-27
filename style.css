@@ -1,420 +1,1140 @@
-/* General Settings */
+/* =====================================
+   GENERAL
+===================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff7fb;
     color: #333;
-    line-height: 1.6;
+    background-color: #fff7fb;
 }
 
 
-/* Navigation Bar */
+/* =====================================
+   NAVIGATION
+===================================== */
+
 nav {
-    background-color: #8e5aa8;
-    color: white;
-    padding: 15px 8%;
+    height: 70px;
+
+    background: #c9e8f5;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    position: relative;
+    z-index: 100;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
+
+
+/* WEBSITE TITLE */
 
 nav h2 {
-    font-size: 25px;
+    color: #4f7f95;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin: 0;
+
+    white-space: nowrap;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+
+/* =====================================
+   HORIZONTAL NAVIGATION
+===================================== */
+
+nav ul,
+nav ul.nav-links,
+nav .nav-links {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
     gap: 20px;
+
+    list-style: none !important;
+
+    margin: 0;
+
+    padding: 0;
 }
 
-nav ul li a {
-    color: white;
+nav li {
+    list-style: none !important;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+nav a {
     text-decoration: none;
+
+    color: #4f6570;
+
     font-weight: bold;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffd6f6;
+nav a:hover {
+    color: #2f718f;
 }
 
 
-/* Hero Section */
-.hero {
-    height: 90vh;
+/* =====================================
+   HOME
+===================================== */
+
+.home {
+    min-height: calc(100vh - 70px);
+
+    padding: 20px 50px 35px;
+
+    background-image: url("images/Juvy.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
     display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   WELCOME
+===================================== */
+
+.welcome {
+    display: contents;
+}
+
+
+/* WELCOME TITLE */
+
+.welcome h1 {
+    order: 1;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    align-self: center;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(45px, 5vw, 68px);
+
+    line-height: 1.1;
+
+    color: white;
+
+    text-align: center;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.45);
+
+    margin-top: 35px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* WELCOME SUBTITLE */
+
+.welcome p {
+    order: 2;
+
+    width: 100%;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-align: center;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.45);
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 15px;
+
+    margin-bottom: 335px;
+}
+
+
+/* =====================================
+   FAVORITES
+===================================== */
+
+.favorites {
+    order: 3;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.favorites h2 {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================
+   FAVORITE CARDS
+===================================== */
+
+.favorite-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* PINK FAVORITE CARDS */
+
+.favorite-card {
+    min-height: 105px;
+
+    padding: 18px;
+
+    background: #ffd6e5;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
     justify-content: center;
-    align-items: center;
-    text-align: center;
 
-    background: linear-gradient(
-        rgba(142, 90, 168, 0.75),
-        rgba(213, 139, 190, 0.75)
-    );
+    text-decoration: none;
+
+    color: #333;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-8px);
+
+    background: #ffc5dc;
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.favorite-card .icon {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.favorite-card span {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   LEARN MORE BUTTON
+===================================== */
+
+.learn-btn {
+    order: 4;
+
+    align-self: center;
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #5b8def;
 
     color: white;
-}
 
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: #ffe1f7;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background-color: white;
-    color: #8e5aa8;
-    padding: 12px 25px;
     border-radius: 25px;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
 }
 
-.button:hover {
-    background-color: #ffd6f6;
+.learn-btn:hover {
+    background: #4779d6;
+
+    transform: translateY(-3px);
 }
 
 
-/* Sections */
+/* =====================================
+   GENERAL CONTENT PAGES
+===================================== */
+
 .section {
-    padding: 80px 8%;
+    min-height: calc(100vh - 70px);
+
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #ffeaf2
+        );
+
     text-align: center;
 }
 
-.section h2 {
-    font-size: 35px;
-    color: #8e5aa8;
-    margin-bottom: 40px;
+.section > h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    color: #d86b91;
+
+    margin-bottom: 35px;
 }
 
 
-/* About Section */
+/* =====================================
+   ABOUT ME
+===================================== */
+
 .about-container {
-    max-width: 900px;
-    margin: auto;
+    max-width: 1000px;
+
+    margin: 0 auto 35px;
+
     display: flex;
+
     align-items: center;
+
+    justify-content: center;
+
     gap: 50px;
+
     text-align: left;
 }
 
+.profile-picture {
+    flex: 0 0 300px;
+}
+
 .profile-picture img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+
+    height: 300px;
+
     object-fit: cover;
+
     border-radius: 50%;
-    border: 8px solid #d58bbe;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
 }
 
 .about-text h3 {
-    font-size: 28px;
-    color: #8e5aa8;
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    color: #d86b91;
+
     margin-bottom: 15px;
 }
 
 .about-text p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
     margin-bottom: 15px;
+
+    color: #555;
 }
 
 
-/* Cards */
-.cards {
-    display: flex;
-    justify-content: center;
+/* =====================================
+   BUTTON
+===================================== */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #d86b91;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #bd5078;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   BOOKS
+===================================== */
+
+.books-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 55px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #ffeaf2
+        );
+
+    text-align: center;
+}
+
+.books-page > h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    color: #d86b91;
+
+    margin-bottom: 8px;
+}
+
+.books-subtitle {
+    color: #777;
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+}
+
+.books-cards {
+    max-width: 1150px;
+
+    margin: 0 auto 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 25px;
-    flex-wrap: wrap;
 }
 
-.card {
-    background-color: white;
-    width: 280px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+.book-card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+
+    text-align: center;
 }
 
-.card:hover {
+.book-card:hover {
     transform: translateY(-8px);
 }
 
-.card h3 {
-    color: #8e5aa8;
+.book-icon {
+    font-size: 50px;
+
     margin-bottom: 15px;
 }
 
+.book-card h2 {
+    color: #d86b91;
 
-/* Movie Section */
-.movie-section {
-    background-color: #f5eafa;
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
+}
+
+.book-card .author {
+    color: #888;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    margin-bottom: 15px;
+}
+
+.book-card p {
+    line-height: 1.6;
+
+    color: #555;
 }
 
 
-/* Food */
-.food-container {
-    display: flex;
-    justify-content: center;
+/* =====================================
+   MOVIES
+===================================== */
+
+.movie-section .cards {
+    max-width: 1100px;
+
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 25px;
-    flex-wrap: wrap;
+}
+
+.movie-section .card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+.movie-section .card:hover {
+    transform: translateY(-8px);
+}
+
+.movie-section .card h3 {
+    color: #d86b91;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.movie-section .card p {
+    color: #555;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================
+   FOODS
+===================================== */
+
+.food-container {
+    max-width: 1100px;
+
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
 }
 
 .food-card {
-    background-color: white;
-    width: 280px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
 }
 
 .food-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
 }
 
 .food-icon {
-    font-size: 60px;
-    margin-bottom: 10px;
+    font-size: 50px;
+
+    margin-bottom: 15px;
 }
 
 .food-card h3 {
-    color: #8e5aa8;
-    margin-bottom: 10px;
+    color: #d86b91;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.food-card p {
+    color: #555;
+
+    line-height: 1.6;
 }
 
 
-/* Favorite Songs */
+/* =====================================
+   SONGS
+===================================== */
+
 .audio-section {
-    background-color: #fff7fb;
+    padding-left: 5%;
+
+    padding-right: 5%;
 }
 
 .songs-container {
+    max-width: 1150px;
+
+    margin: 0 auto 35px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    margin: 30px auto;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
 }
 
 .song-card {
-    background-color: white;
-    border-radius: 18px;
-    padding: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+
+    border-radius: 20px;
+
     overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
 }
 
 .song-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
 .song-card iframe {
+    display: block;
+
     width: 100%;
-    height: 352px;
+
     border: none;
-    border-radius: 12px;
 }
 
 .song-info {
-    padding: 10px 8px 5px;
+    padding: 20px;
+
+    text-align: left;
 }
 
 .song-info h3 {
-    color: #8e5aa8;
-    margin-bottom: 8px;
-    font-size: 20px;
+    color: #d86b91;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
 }
 
 .song-info p {
-    font-size: 14px;
+    color: #555;
+
     line-height: 1.6;
 }
 
-/* Love Languages */
-.love-language-section {
-    background-color: #f5eafa;
-}
+
+/* =====================================
+   LOVE LANGUAGES
+===================================== */
 
 .love-language-container {
+    max-width: 1100px;
+
+    margin: 0 auto 35px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 25px;
-    max-width: 1000px;
-    margin: 30px auto;
 }
 
 .love-language-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
 }
 
 .love-language-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
 .love-icon {
     font-size: 50px;
+
     margin-bottom: 15px;
 }
 
 .love-language-card h3 {
-    color: #8e5aa8;
-    font-size: 21px;
+    color: #d86b91;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
     margin-bottom: 12px;
 }
 
 .love-language-card p {
-    font-size: 14px;
-    line-height: 1.7;
+    color: #555;
+
+    line-height: 1.6;
 }
 
 
-/* Love Language - Tablet */
-@media (max-width: 900px) {
-    .love-language-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+/* =====================================
+   PHOTOS
+===================================== */
 
-
-/* Love Language - Phone */
-@media (max-width: 600px) {
-    .love-language-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Favorite Photos */
 .photo-section {
-    background-color: #f5eafa;
+    padding-left: 5%;
+
+    padding-right: 5%;
 }
 
 .photos-container {
+    max-width: 1150px;
+
+    margin: 0 auto 35px;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    margin: 30px auto;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
 }
 
 .photo-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
 }
 
 .photo-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
 .photo-card img {
     width: 100%;
+
     height: 250px;
+
     object-fit: cover;
-    border-radius: 12px;
+
+    border-radius: 15px;
+
     display: block;
+
     margin-bottom: 15px;
 }
 
 .photo-card p {
+    color: #555;
+
+    line-height: 1.5;
+
     font-size: 14px;
-    line-height: 1.6;
-    padding: 0 5px 5px;
-}
 
-/* Tablet */
-@media (max-width: 900px) {
-    .photos-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .photos-container {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-card img {
-        height: 300px;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #8e5aa8;
-    color: white;
-    text-align: center;
-    padding: 30px;
+    padding: 0 8px 10px;
 }
 
 
-/* Tablet */
-@media (max-width: 900px) {
-    .songs-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+/* =====================================
+   RESPONSIVE - 1100px
+===================================== */
 
-
-/* Mobile Design */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 
     nav {
+        padding: 0 25px;
+    }
+
+    nav ul,
+    nav ul.nav-links,
+    nav .nav-links {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .favorite-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .welcome p {
+        margin-bottom: 250px;
+    }
+
+    .books-cards,
+    .movie-section .cards,
+    .food-container,
+    .songs-container,
+    .love-language-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .photos-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE - 900px
+===================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 15px 20px;
+
         flex-direction: column;
-        gap: 10px;
+
+        gap: 12px;
     }
 
-    nav ul {
+    nav ul,
+    nav ul.nav-links,
+    nav .nav-links {
+        flex-direction: row !important;
+
         flex-wrap: wrap;
+
         justify-content: center;
+
+        gap: 10px 15px;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .home {
+        padding:
+            20px 30px 35px;
+    }
+
+    .welcome h1 {
+        font-size:
+            clamp(40px, 7vw, 58px);
+
+        width: 100%;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .welcome p {
+        width: 100%;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        margin-bottom: 180px;
     }
 
     .about-container {
         flex-direction: column;
+
         text-align: center;
     }
 
-    .section {
-        padding: 60px 5%;
+    .profile-picture {
+        flex: none;
+
+        width: 280px;
+    }
+
+    .about-text {
+        max-width: 700px;
     }
 }
 
 
-/* Small Phone */
-@media (max-width: 600px) {
-    .songs-container {
+/* =====================================
+   RESPONSIVE - 700px
+===================================== */
+
+@media (max-width: 700px) {
+
+    .home {
+        padding:
+            20px 20px 30px;
+    }
+
+    .welcome h1 {
+        font-size: 42px;
+
+        margin-top: 25px;
+    }
+
+    .welcome p {
+        font-size: 17px;
+
+        margin-bottom: 120px;
+    }
+
+    .favorites h2 {
+        font-size: 26px;
+    }
+
+    .favorite-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .favorite-card {
+        min-height: 95px;
+    }
+
+    .learn-btn {
+        margin-top: 20px;
+    }
+
+    .books-cards,
+    .movie-section .cards,
+    .food-container,
+    .songs-container,
+    .love-language-container,
+    .photos-container {
         grid-template-columns: 1fr;
+    }
+
+    .section,
+    .books-page {
+        padding:
+            45px 20px;
+    }
+
+    .section > h2,
+    .books-page > h1 {
+        font-size: 34px;
+    }
+
+    .songs-container {
+        max-width: 500px;
+    }
+
+    .photos-container {
+        max-width: 500px;
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE - 450px
+===================================== */
+
+@media (max-width: 450px) {
+
+    nav h2 {
+        font-size: 21px;
+    }
+
+    nav ul,
+    nav ul.nav-links,
+    nav .nav-links {
+        gap: 8px 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+
+        margin-left: 0;
+    }
+
+    .welcome p {
+        font-size: 15px;
+
+        margin-left: 0;
+
+        margin-bottom: 90px;
+    }
+
+    .favorite-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .favorite-card {
+        min-height: 90px;
+
+        padding: 12px;
+    }
+
+    .favorite-card .icon {
+        font-size: 27px;
+    }
+
+    .favorite-card span {
+        font-size: 13px;
+    }
+
+    .learn-btn {
+        font-size: 14px;
+
+        padding:
+            11px 20px;
+    }
+
+    .profile-picture {
+        width: 230px;
+    }
+
+    .profile-picture img {
+        height: 230px;
+    }
+
+    .section > h2,
+    .books-page > h1 {
+        font-size: 29px;
     }
 }
